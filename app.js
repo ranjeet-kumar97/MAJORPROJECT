@@ -105,6 +105,8 @@ app.use("/listings/:id/reviews",reviewRouter);
 app.use("/", userRouter);
 
 
+
+
 //page not found route
 app.all("/*splat",(req,res,next) => {
     next(new ExpressError(404,"Page Not Found!"));
@@ -116,6 +118,8 @@ app.use((err,req,res,next) => {
     res.status(statusCode).render("error.ejs",{message});
     
 });
+
+
 
 
 
